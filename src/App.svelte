@@ -36,8 +36,7 @@
 
   let current_page = 1;
   let page = 0;
-  let rows_per_page = 10;
-  let rows = 5;
+  let rows = 10;
   let start = 0;
   // let loop = start - 1
   let arr = [];
@@ -53,10 +52,11 @@
     arr = newArr;
   })();
 
-  $: totalPages = items.length / 5;
+  $: totalPages = items.length / rows;
 
   // const nextPage =
   $: console.log("curr page",current_page);
+  $: console.log("rows",rows);
   $: console.log("page",page);
 </script>
 
